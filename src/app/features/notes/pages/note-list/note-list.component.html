@@ -1,0 +1,14 @@
+<div class="note-list">
+    <h1>Notes</h1>
+    <button mat-raised-button color="primary" (click)="addNote()">Add Note</button>
+    <mat-list>
+      <mat-list-item *ngFor="let note of notes" (click)="viewNote(note.id)">
+        <h3 matLine>{{ note.title }}</h3>
+        <p matLine>{{ note.description }}</p>
+        <button mat-icon-button color="warn" (click)="deleteNote(note.id)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </mat-list-item>
+    </mat-list>
+  </div>
+  

@@ -1,0 +1,14 @@
+<div class="note-detail">
+    <h1>{{ isEdit ? 'Edit Note' : 'Create Note' }}</h1>
+    <form (ngSubmit)="saveNote()" [formGroup]="noteForm">
+      <mat-form-field>
+        <input matInput placeholder="Title" formControlName="title" />
+      </mat-form-field>
+      <mat-form-field>
+        <textarea matInput placeholder="Description" formControlName="description"></textarea>
+      </mat-form-field>
+      <mat-checkbox formControlName="isActive">Active</mat-checkbox>
+      <button mat-raised-button color="primary" type="submit">Save</button>
+    </form>
+  </div>
+  
